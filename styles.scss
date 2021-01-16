@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+$fontsize: 32px;
+$font: "Inter", sans-serif;
+$darkblue: hsl(240, 38%, 20%);
+$grayishblue: hsl(240, 18%, 77%);
+
+.attribution {
+	padding-top: 1em;
+	font-size: 11px;
+	text-align: center;
+	background-color: rgb(252, 234, 227);
+	padding: 0.25em 0.5em;
+}
+.attribution a {
+	color: mediumvioletred;
+	font-weight: bold;
+	background-color: rgb(212, 208, 208);
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	letter-spacing: 2px;
+	&:hover {
+		background-color: mediumvioletred;
+		color: black;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	width: 350px;
+}
+
+.slider {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__img {
+		position: relative;
+	}
+	&__nav {
+		background-color: white;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		display: inline-block;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0.8em 1em 0.7em 1em;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: rgb(245, 210, 233);
+		}
+
+		&--img {
+			width: 10px;
+			height: 15px;
+		}
+
+		&--left {
+			margin-right: 1.3em;
+		}
+	}
+
+	&__profile {
+		width: 100%;
+	}
+}
+
+.review {
+	position: relative;
+	width: 90%;
+	margin: 3em auto 0 auto;
+	text-align: center;
+
+	&__quotes {
+		width: 60px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__quote {
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 1.5;
+		color: $darkblue;
+	}
+
+	&__name {
+		margin-top: 15px;
+		font-weight: 700;
+		color: $darkblue;
+	}
+
+	&__position {
+		color: $grayishblue;
+		margin-top: 5px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.attribution {
+		position: absolute;
+		bottom: 5px;
+	}
+	.container {
+		width: 900px;
+		position: relative;
+	}
+	.slider {
+		width: 600px;
+
+		&__img {
+			position: absolute;
+			width: 500px;
+			right: 0;
+		}
+
+		&__nav {
+			left: 30%;
+		}
+	}
+
+	.review {
+		width: 390px;
+		text-align: left;
+
+		&__quotes {
+			left: 20%;
+		}
+
+		&__position {
+			margin-top: 15px;
+			margin-left: 15px;
+		}
+
+		&__titles {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
