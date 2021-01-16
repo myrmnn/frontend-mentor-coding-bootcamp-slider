@@ -9,14 +9,12 @@ $grayishblue: hsl(240, 18%, 77%);
 	padding-top: 1em;
 	font-size: 11px;
 	text-align: center;
-	background-color: rgb(252, 234, 227);
-	padding: 0.25em 0.5em;
+	background-color: #f4f4fc;
+	padding: 0em 0.5em;
 }
 .attribution a {
 	color: mediumvioletred;
-	font-weight: bold;
-	background-color: rgb(212, 208, 208);
-	padding: 0.25em 0.5em;
+	padding: 0em 0.5em;
 	text-decoration: none;
 	transition: all 0.3s ease;
 	letter-spacing: 2px;
@@ -33,6 +31,10 @@ $grayishblue: hsl(240, 18%, 77%);
 }
 
 body {
+	background-image: url(/images/pattern-curve.svg);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 80%;
 	font-family: $font;
 	display: flex;
 	flex-direction: column;
@@ -121,6 +123,9 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+	body {
+		background-size: 60%;
+	}
 	.attribution {
 		position: absolute;
 		bottom: 5px;
